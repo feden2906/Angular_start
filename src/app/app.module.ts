@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { GggComponent } from './ggg/ggg.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    GggComponent
+    UsersComponent
   ],
   imports: [
     BrowserModule
