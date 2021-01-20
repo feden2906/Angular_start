@@ -1,5 +1,6 @@
-<div *ngFor="let user of users">
-  {{user.name}} - {{user.age}} - {{user.status}}
-  <app-user></app-user>
-  <app-address></app-address>
+<div *ngFor="let user of users" class="usersWrapper">
+  <app-user [user]="user"></app-user>
+  <app-address [address]="user.address"></app-address>
 </div>
+<hr>
+
