@@ -1,6 +1,6 @@
 <div *ngFor="let user of users" class="usersWrapper">
-  <app-user [user]="user"></app-user>
-  <app-address [address]="user.address"></app-address>
+  <app-user [user]="user" (bubbleUp)="getBubble($event)"></app-user>
+<!--  <app-address [address]="user.address"></app-address>-->
 </div>
 <hr>
 

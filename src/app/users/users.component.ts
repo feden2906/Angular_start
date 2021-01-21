@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {usersWithAddress} from '../../data/users';
+
+import {User} from '../../models/User';
+import {UserService} from '../services/user.service';
 
 @Component({
   selector: 'app-users',
@@ -8,12 +10,16 @@ import {usersWithAddress} from '../../data/users';
 })
 export class UsersComponent implements OnInit {
 
-  users: any[] = usersWithAddress;
+  users: User[];
+  singlUser: User;
 
-  constructor() {
+  constructor(private userService: UserService) {
   }
 
   ngOnInit(): void {
+    this.userService.getUsers().subscribe(value => this.users = value);
   }
-
+  getBubble(user: User): void {
+    this.singlUser = user;
+  }
 }
